@@ -4,10 +4,10 @@ This repository contains the code necessary to provision AKS clusters using Terr
 
 
 
-Basic provisioning of a Resource Group with Terraform on Azure
+provisioning of a Resource Group with Terraform on Azure
 
-Basic provisioning of a cluster with Terraform on AKS
+provisioning of a cluster with Terraform on AKS
 
-AKS cluster with two node pools
+AKS cluster with two node pools and Ingress controller
 
-AKS cluster with enabled Ingress controller
+
