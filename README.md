@@ -1,4 +1,4 @@
-# Provisioning Kubernetes clusters on Azure with Terraform and AKS
+# Provisioning Kubernetes cluster on Azure with Terraform and AKS
 This repository contains the code necessary to provision AKS clusters using Terraform.
 
 
