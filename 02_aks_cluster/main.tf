@@ -25,8 +25,13 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     name       = "default"
     node_count = "2"
     vm_size    = "standard_d2_v2"
-  }
+ }
   identity {
     type = "SystemAssigned"
+  }
+  addon_profile {
+    http_application_routing {
+      enabled = true
+    }
   }
 }
