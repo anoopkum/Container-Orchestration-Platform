@@ -1,0 +1,5 @@
+Create ACR with Azure Cli
+
+az acr create --resource-group az-wyep-rg --name az-wyep-acr --sku Standard --location uksouth
+
+ az aks update -n az-wyep-kubernetes -g az-wyep-rg --attach-acr az-wyep-acr
