@@ -7,11 +7,11 @@ This repository contains the code necessary to provision AKS clusters using Terr
 
 3. Implement the Terraform code
 
-4. Initialize Terraform
+4. Create Azure container Registry
 
-5. Create a Terraform execution plan
+5. Create kubernates deployment services
 
-6. Apply a Terraform execution plan
+6. Build and Deploy Azure Pipelines
 
 7. Verify the results
 
