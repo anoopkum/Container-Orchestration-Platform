@@ -9,7 +9,7 @@ variable "resource_group_location" {
 }
 
 variable "agent_count" {
-    default = 2
+    default = "2"
 }
 
 variable "ssh_public_key" {
@@ -20,14 +20,14 @@ variable "dns_prefix" {
     default = "az-wyep-kubernetes"
 }
 
-variable cluster_name {
+variable "cluster_name" {
     default = "az-wyep-kubernetes"
 }
 
-variable resource_group_name {
+variable "resource_group_name" {
     default = "az-wyep-rg"
 }
 
-variable location {
+variable "location" {
     default = "uksouth"
 }
