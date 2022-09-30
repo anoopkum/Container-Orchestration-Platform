@@ -1,4 +1,4 @@
-variable "resource_group_name_prefix" {
+variable "rg-name" {
   default       = "az-wyep-rg"
   description   = "managed container orchestration resource group"
 }
@@ -13,7 +13,7 @@ variable "agent_count" {
 }
 
 variable "ssh_public_key" {
-    default = "~/.ssh/key_ID"
+    default = "~/.ssh/id_rsa.pub"
 }
 
 variable "dns_prefix" {
@@ -25,9 +25,13 @@ variable "cluster_name" {
 }
 
 variable "resource_group_name" {
-    default = "az-wyep-rg"
+    default = "az-wyep-k8s-rg"
 }
+variable "aks_service_principal_app_id" {
+    default = "xxxxxxxxxxxxxxxxxxxxxxxx"
+  
+}
+variable "aks_service_principal_client_secret" {
+    default = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-variable "location" {
-    default = "uksouth"
 }
