@@ -1,13 +1,13 @@
 # Generate resource group name
 resource "azurerm_resource_group" "rg" {
-  name      = var.rg-name.id
+  name      = var.resource_group_name
   location  = var.resource_group_location
 }
 
 resource "azurerm_kubernetes_cluster" "k8s" {
     name                = var.cluster_name
-    location            = azurerm_resource_group.k8s.location
-    resource_group_name = azurerm_resource_group.k8s.name
+    location            = azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.rg.name
     dns_prefix          = var.dns_prefix
 
     linux_profile {
@@ -30,7 +30,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     }
 
     network_profile {
-        load_balancer_sku = "Standard"
+        load_balancer_sku = "standard"
         network_plugin = "kubenet"
     }
 
@@ -38,3 +38,4 @@ resource "azurerm_kubernetes_cluster" "k8s" {
         Environment = "Development"
     }
 }
+
