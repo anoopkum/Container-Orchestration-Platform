@@ -5,14 +5,17 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      version = "~>3.0"
     }
   }
+
   
   backend "azurerm" {
-    resource_group_name  = "az-wyep-storage-rg"
-    storage_account_name = "az-wyep-storage-account"
+    resource_group_name  = "az-wyep-rg"
+    storage_account_name = "azwyepstorageaccount"
     container_name       = "tfstate"
     key                  = "storage.account.key"
   }
 }
+provider "azurerm" {
+  features {}
